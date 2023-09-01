@@ -1,4 +1,4 @@
-from django.template import Library
+from django import template
 from django.template.loader import get_template
 from django.utils.translation import gettext_lazy as _
 import datetime
@@ -7,7 +7,7 @@ from openinghours.models import WEEKDAYS, OpeningHours
 from openinghours import utils
 
 
-register = Library()
+register = template.Library()
 
 
 @register.filter(expects_localtime=True)
