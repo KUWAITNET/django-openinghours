@@ -6,8 +6,7 @@ except ImportError:
     get_current_request = None
 from openinghours.models import OpeningHours, ClosingRules, PREMISES_MODEL
 from django.core.exceptions import ImproperlyConfigured
-
-from compat import get_model
+from django.db.models.loading import get_model
 
 
 def get_premises_model():
